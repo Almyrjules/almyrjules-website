@@ -81,7 +81,7 @@ const SHOWS: Show[] = [
     description:
       "An intimate night of original songs and stories raising funds to keep the Songbird Coven Songwriter Show going. Lineup: Emma Lamontagne · Almyr Jules · Chase Van Dusen · TANAEYA · Gabrielle Goulet · Sam Wood · Rox Anne · Sam Davs. Free entry — reserve your spot at broadwayprince.com. Specialty drinks, raffles & more.",
     tag: "Free",
-    ticketUrl: "https://www.broadwayprince.com",
+    ticketUrl: "https://www.broadwayprince.com/event-details/songbird-summer-bash",
     ticketLabel: "Reserve Spot",
   },
   {
