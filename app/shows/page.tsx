@@ -16,6 +16,8 @@ interface Show {
   time: string;
   description: string;
   tag?: string;
+  ticketUrl?: string;
+  ticketLabel?: string;
 }
 
 const SHOWS: Show[] = [
@@ -79,6 +81,8 @@ const SHOWS: Show[] = [
     description:
       "An intimate night of original songs and stories raising funds to keep the Songbird Coven Songwriter Show going. Lineup: Emma Lamontagne · Almyr Jules · Chase Van Dusen · TANAEYA · Gabrielle Goulet · Sam Wood · Rox Anne · Sam Davs. Free entry — reserve your spot at broadwayprince.com. Specialty drinks, raffles & more.",
     tag: "Free",
+    ticketUrl: "https://www.broadwayprince.com",
+    ticketLabel: "Reserve Spot",
   },
   {
     date: "August 1, 2026",
@@ -87,8 +91,10 @@ const SHOWS: Show[] = [
     city: "Ottawa, ON",
     time: "6:00 – 9:00 PM",
     description:
-      "Solo performance at BistroFest. Lineup: Finely Tuned Elephant (headline) · Almyr Jules · The Friendly Frogs Freak Show (opener). Free entry — tickets via Eventbrite at linktr.ee/bistrofest. All donations go directly to artists.",
+      "Solo performance at BistroFest. Lineup: Finely Tuned Elephant (headline) · Almyr Jules · The Friendly Frogs Freak Show (opener). Free entry — all donations go directly to artists.",
     tag: "Free",
+    ticketUrl: "https://linktr.ee/bistrofest",
+    ticketLabel: "Get Tickets",
   },
   {
     date: "August 2, 2026",
@@ -147,6 +153,16 @@ export default function ShowsPage() {
               </p>
               <p className="mt-0.5 text-sm text-cream-soft">{show.time}</p>
               <p className="mt-2 text-sm text-cream-soft/70">{show.description}</p>
+              {show.ticketUrl && (
+                <a
+                  href={show.ticketUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-gold mt-4 inline-block rounded-full px-6 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal"
+                >
+                  {show.ticketLabel ?? "Get Tickets"}
+                </a>
+              )}
             </div>
           </div>
         ))}
