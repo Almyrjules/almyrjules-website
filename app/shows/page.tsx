@@ -22,6 +22,14 @@ interface Show {
 
 const SHOWS: Show[] = [
   {
+    date: "July 31, 2026",
+    name: "Almyr Jules Live",
+    venue: "Li Li's Bar",
+    city: "Ottawa, ON",
+    time: "7:00 – 10:00 PM",
+    description: "Live solo performance at Li Li's Bar.",
+  },
+  {
     date: "August 1, 2026",
     name: "BistroFest",
     venue: "Hog's Back Grill & Bistro",
@@ -41,6 +49,14 @@ const SHOWS: Show[] = [
     time: "11:00 AM – 2:00 PM",
     description: "Solo brunch residency — live music every 1st & 3rd Sunday.",
     tag: "Residency",
+  },
+  {
+    date: "August 7, 2026",
+    name: "Live at 1818 Cidery",
+    venue: "1818 Cidery",
+    city: "Ottawa, ON",
+    time: "6:00 – 7:30 PM",
+    description: "Live performance at 1818 Cidery.",
   },
   {
     date: "August 16, 2026",
