@@ -53,11 +53,14 @@ const SHOWS: Show[] = [
   },
   {
     date: "August 27, 2026",
-    name: "Ash Ravens Band + Almyr Jules",
+    name: "Ash Ravens + Almyr Jules + ASIF- Man on a Bike",
     venue: "Rainbow Bistro",
     city: "Ottawa, ON",
-    time: "8:00 PM",
-    description: "Live at Rainbow Bistro, 76 Murray Street / Byward Market.",
+    time: "8:00 PM (Doors) · Music 8:30 PM",
+    description:
+      "Ash Ravens — guitar driven songs of soul & fire. Almyr Jules — Narrative Soul and R&B. ASIF — acoustic rock, R&B and hip hop. 19+. Online tickets $15 + tax / Door $20.",
+    ticketUrl: "https://therainbow.ca/event/6607806/766143442/ash-ravens-band-almyr-jules",
+    ticketLabel: "Get Tickets",
   },
   {
     date: "September 6, 2026",
