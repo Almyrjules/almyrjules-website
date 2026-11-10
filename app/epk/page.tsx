@@ -4,24 +4,24 @@ import Link from "next/link";
 import VideoEmbed from "@/app/components/VideoEmbed";
 import {
   BOOKING_EMAIL,
-  LISTEN_NOW_URL,
+  FEATURED_APPLE_MUSIC_URL,
   SOCIAL_LINKS,
-  SPOTIFY_FEATURED_TRACK_EMBED,
+  SPOTIFY_FEATURED_EMBED,
   VIDEOS,
 } from "@/app/lib/site";
 
 export const metadata: Metadata = {
   title: "Press Kit (EPK) | Almyr Jules",
   description:
-    "Electronic press kit for Almyr Jules — bio, photos, music, videos, live setup, and booking contact.",
+    "Electronic press kit for Almyr Jules: bio, photos, music, videos, live setup and booking contact.",
 };
 
 const FACTS = [
-  { label: "Genre", value: "Soul · R&B · Folk" },
+  { label: "Genre", value: "Contemporary R&B · Soul" },
   { label: "Based In", value: "Ottawa, Ontario, Canada" },
-  { label: "Latest Single", value: "“If You Come Back For More”" },
-  { label: "Upcoming Album", value: "Essentials Vol. 1 (13 tracks) — June 27, 2026" },
-  { label: "Live", value: "Performs solo, acoustic duo, or with full band SWAY" },
+  { label: "Latest Single", value: "“Starlight” (March 2026)" },
+  { label: "Album", value: "Essentials Vol. 1 (13 tracks), out now" },
+  { label: "Live", value: "Solo, acoustic duo, or with his five-piece band SWAY" },
 ];
 
 const PRESS_PHOTOS = [
@@ -43,8 +43,8 @@ export default function EPKPage() {
         Almyr Jules
       </h1>
       <p className="mt-4 max-w-2xl text-cream-soft">
-        Electronic Press Kit &mdash; biography, photos, music, videos, live
-        setup, and booking information for press, promoters, and venues.
+        Bio, photos, music, video, live formats and booking contact for
+        promoters, press and venues.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4">
@@ -82,31 +82,28 @@ export default function EPKPage() {
             Biography
           </p>
           <h2 className="mt-3 font-display text-3xl text-cream">
-            Redefining modern ballad R&amp;B and soul
+            Contemporary R&amp;B and soul from Ottawa
           </h2>
           <div className="mt-6 space-y-5 text-cream-soft">
             <p>
-              Almyr Jules is an Ottawa-based Canadian artist delivering ballad
-              R&amp;B and soul with raw emotional depth and vulnerability. His
-              sound bridges classic soul tradition with a contemporary R&amp;B
-              sensibility, drawing inspiration from artists like Donny
-              Hathaway, Maxwell, and Giveon &mdash; while carving out a
-              distinct lane all his own.
+              Almyr Jules is a singer, songwriter and guitarist based in Ottawa.
+              He makes contemporary R&amp;B and soul in the tradition of Donny
+              Hathaway and Maxwell, with an ear for newer voices like Giveon.
             </p>
             <p>
-              A true craftsman of song, Almyr writes narratives centered on
-              love, longing, and redemption. His performances are emotionally
-              striking, delivered over seductive musical progressions with
-              smouldering vocal work that draws listeners into the story
-              behind every track.
+              His songs are about love, longing and redemption, and he sings them
+              like he means it. On stage he moves between a stripped-back solo set
+              and a full band, SWAY, and the songs hold up either way.
             </p>
             <p>
-              His most recent project, <em>Levels</em>, is a six-track EP
-              featuring collaborations with JW-Jones and Jahmeema, alongside
-              the standalone singles &ldquo;The Beginning&rdquo; and
-              &ldquo;If You Come Back For More.&rdquo; His debut full-length
-              album, <em>Essentials Vol. 1</em> &mdash; 13 tracks &mdash; is
-              set for release on June 27, 2026.
+              He also worked as a musician on the OWN film{" "}
+              <em>Song and Story: Amazing Grace</em>.
+            </p>
+            <p>
+              His album <em>Essentials Vol. 1</em> is out now. It collects 13
+              songs from 2020 to 2026, including tracks from the <em>Levels</em> EP
+              with JW-Jones and Jahmeema and the singles &ldquo;Starlight&rdquo;
+              and &ldquo;If You Come Back For More.&rdquo;
             </p>
           </div>
 
@@ -115,7 +112,7 @@ export default function EPKPage() {
             contemporary flair. With his velvety vocals and emotive lyrics, he
             effortlessly transports listeners.&rdquo;
             <footer className="mt-2 text-sm not-italic uppercase tracking-[0.2em] text-cream-soft">
-              &mdash; Certified Bop
+              Certified Bop
             </footer>
           </blockquote>
         </div>
@@ -142,8 +139,8 @@ export default function EPKPage() {
         <div className="mt-8 grid gap-10 md:grid-cols-2 md:items-center">
           <div className="overflow-hidden rounded-2xl border border-charcoal-line/60 shadow-2xl">
             <iframe
-              title="Spotify player — If You Come Back For More"
-              src={SPOTIFY_FEATURED_TRACK_EMBED}
+              title="Spotify player: Essentials Vol. 1"
+              src={SPOTIFY_FEATURED_EMBED}
               width="100%"
               height="352"
               style={{ border: 0 }}
@@ -155,29 +152,33 @@ export default function EPKPage() {
           <div>
             <ul className="space-y-3 text-cream-soft">
               <li>
+                <span className="text-cream">Essentials Vol. 1</span>
+                : 13-track album, July 2026.
+              </li>
+              <li>
+                <span className="text-cream">Starlight</span>
+                : latest single, March 2026.
+              </li>
+              <li>
                 <span className="text-cream">If You Come Back For More</span>
-                {" "}&mdash; latest single, streaming everywhere now.
+                : single, June 2025.
               </li>
               <li>
                 <span className="text-cream">The Beginning</span>
-                {" "}&mdash; single, official music video available.
+                : single, with music video.
               </li>
               <li>
                 <span className="text-cream">Levels</span>
-                {" "}&mdash; six-track EP featuring JW-Jones and Jahmeema.
-              </li>
-              <li>
-                <span className="text-cream">Essentials Vol. 1</span>
-                {" "}&mdash; 13-track album, releasing June 27, 2026.
+                : six-track EP featuring JW-Jones and Jahmeema.
               </li>
             </ul>
             <a
-              href={LISTEN_NOW_URL}
+              href={FEATURED_APPLE_MUSIC_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-gold hover:text-gold-bright"
             >
-              All streaming links &rarr;
+              Listen on Apple Music &rarr;
             </a>
           </div>
         </div>
@@ -189,7 +190,7 @@ export default function EPKPage() {
           Videos
         </p>
         <h2 className="mt-3 font-display text-3xl text-cream sm:text-4xl">
-          Official Music Videos
+          Music Videos
         </h2>
         <div className="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {VIDEOS.map((video) => (
@@ -234,22 +235,22 @@ export default function EPKPage() {
           Performance &amp; Lineup
         </h2>
         <p className="mt-4 max-w-2xl text-cream-soft">
-          Almyr performs across Ottawa and beyond, including residencies at
-          Rabbit Hole (biweekly Thursdays) and Angelina&rsquo;s Restaurant
-          (1st &amp; 3rd Sundays). The set can be tailored to the room, from
-          a full band production to an intimate acoustic performance.
+          Almyr plays regularly across Ottawa, including a brunch residency
+          at Angelina&rsquo;s Restaurant on the first and third Sunday of
+          each month. He books as a solo act, an acoustic duo, or with his
+          five-piece band SWAY.
         </p>
 
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           <div className="rounded-2xl border border-charcoal-line/60 bg-charcoal-soft p-8">
             <h3 className="font-display text-xl text-cream">
-              Full Band &mdash; SWAY
+              Full Band: SWAY
             </h3>
             <p className="mt-2 text-sm uppercase tracking-[0.2em] text-gold">
               5-piece
             </p>
             <ul className="mt-4 space-y-2 text-cream-soft">
-              <li>Lead Vocals &amp; Guitar &mdash; Almyr Jules</li>
+              <li>Lead Vocals &amp; Guitar: Almyr Jules</li>
               <li>Lead Guitar</li>
               <li>Keyboards</li>
               <li>Bass</li>
@@ -264,19 +265,18 @@ export default function EPKPage() {
               Solo or duo
             </p>
             <ul className="mt-4 space-y-2 text-cream-soft">
-              <li>Vocals &amp; Guitar &mdash; Almyr Jules</li>
+              <li>Vocals &amp; Guitar: Almyr Jules</li>
               <li>Optional second guitar / keys</li>
             </ul>
             <p className="mt-4 text-sm text-cream-soft">
-              Ideal for listening rooms, brunches, and intimate venues.
+              Suits listening rooms, brunch and dinner service, and smaller venues.
             </p>
           </div>
         </div>
 
         <p className="mt-8 text-cream-soft">
-          Technical and stage requirements scale with the performance format
-          &mdash; a detailed technical rider and stage plot are available on
-          request.
+          A technical rider and stage plot are available on request for each
+          format.
         </p>
       </div>
 
@@ -286,11 +286,10 @@ export default function EPKPage() {
           Booking &amp; Press
         </p>
         <h2 className="mt-3 font-display text-3xl text-cream sm:text-4xl">
-          Let&rsquo;s work together
+          Get in touch
         </h2>
         <p className="mt-4 text-cream-soft">
-          For booking inquiries, press requests, and collaborations, reach out
-          directly.
+          For bookings, press and collaborations, email Almyr directly.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a

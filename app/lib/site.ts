@@ -1,8 +1,8 @@
 export const SITE = {
   name: "Almyr Jules",
-  tagline: "Soul. Folk. Story.",
+  tagline: "Contemporary R&B · Soul",
   description:
-    "Official site of Almyr Jules — soul and folk artist. Listen to the latest music, watch videos, and find upcoming shows.",
+    "Official site of Almyr Jules, a contemporary R&B and soul singer-songwriter from Ottawa. New music, videos and upcoming shows.",
 };
 
 export const NAV_LINKS = [
@@ -28,10 +28,16 @@ export const SOCIAL_LINKS = {
   tiktok: "https://www.tiktok.com/@almyrjules?lang=en",
 };
 
-export const LISTEN_NOW_URL = "https://ffm.to/ifcbfm";
+// Current featured release: Essentials Vol. 1 (13 tracks, July 2026).
+export const FEATURED_SPOTIFY_URL =
+  "https://open.spotify.com/album/4YI929G3Wyx605RziwMCwL";
+export const FEATURED_APPLE_MUSIC_URL =
+  "https://music.apple.com/ca/album/essentials/6786681478";
 
-export const SPOTIFY_FEATURED_TRACK_EMBED =
-  "https://open.spotify.com/embed/track/4QINc6jVTW8vKRz6TGI0Ou?utm_source=generator&theme=0";
+export const LISTEN_NOW_URL = FEATURED_SPOTIFY_URL;
+
+export const SPOTIFY_FEATURED_EMBED =
+  "https://open.spotify.com/embed/album/4YI929G3Wyx605RziwMCwL?utm_source=generator&theme=0";
 
 export const SPOTIFY_ARTIST_EMBED =
   "https://open.spotify.com/embed/artist/37LBYSSXZ7vcfYK6cPa1JF?utm_source=generator&theme=0";

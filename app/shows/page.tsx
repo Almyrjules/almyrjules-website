@@ -8,13 +8,16 @@ export const metadata: Metadata = {
   description: "Upcoming live shows and tour dates for Almyr Jules.",
 };
 
+// Rebuild hourly so past dates drop off without a redeploy.
+export const revalidate = 3600;
+
 interface Show {
   date: string;
   name: string;
   venue: string;
   city: string;
   time: string;
-  description: string;
+  description?: string;
   tag?: string;
   ticketUrl?: string;
   ticketLabel?: string;
@@ -27,7 +30,7 @@ const SHOWS: Show[] = [
     venue: "Li Li's Bar",
     city: "Ottawa, ON",
     time: "7:00 – 10:00 PM",
-    description: "Live solo performance at Li Li's Bar.",
+    description: "Solo set.",
   },
   {
     date: "August 1, 2026",
@@ -36,7 +39,7 @@ const SHOWS: Show[] = [
     city: "Ottawa, ON",
     time: "6:00 – 9:00 PM",
     description:
-      "Solo performance at BistroFest. Lineup: Finely Tuned Elephant (headline) · Almyr Jules · The Friendly Frogs Freak Show (opener). Free entry — all donations go directly to artists.",
+      "Solo set. With Finely Tuned Elephant (headliner) and The Friendly Frogs Freak Show. Free entry; donations go to the artists.",
     tag: "Free",
     ticketUrl: "https://linktr.ee/bistrofest",
     ticketLabel: "Get Tickets",
@@ -47,7 +50,7 @@ const SHOWS: Show[] = [
     venue: "Angelina's Restaurant",
     city: "Ottawa, ON",
     time: "11:00 AM – 2:00 PM",
-    description: "Solo brunch residency — live music every 1st & 3rd Sunday.",
+    description: "Solo brunch set, every first and third Sunday.",
     tag: "Residency",
   },
   {
@@ -56,7 +59,6 @@ const SHOWS: Show[] = [
     venue: "1818 Cidery",
     city: "Ottawa, ON",
     time: "6:00 – 7:30 PM",
-    description: "Live performance at 1818 Cidery.",
   },
   {
     date: "August 16, 2026",
@@ -64,17 +66,17 @@ const SHOWS: Show[] = [
     venue: "Angelina's Restaurant",
     city: "Ottawa, ON",
     time: "11:00 AM – 2:00 PM",
-    description: "Solo brunch residency — live music every 1st & 3rd Sunday.",
+    description: "Solo brunch set, every first and third Sunday.",
     tag: "Residency",
   },
   {
     date: "August 27, 2026",
-    name: "Ash Ravens + Almyr Jules + ASIF- Man on a Bike",
+    name: "Ash Ravens, Almyr Jules, ASIF",
     venue: "Rainbow Bistro",
     city: "Ottawa, ON",
-    time: "8:00 PM (Doors) · Music 8:30 PM",
+    time: "Doors 8:00 PM · Music 8:30 PM",
     description:
-      "Ash Ravens — guitar driven songs of soul & fire. Almyr Jules — Narrative Soul and R&B. ASIF — acoustic rock, R&B and hip hop. 19+. Online tickets $15 + tax / Door $20.",
+      "With Ash Ravens and ASIF (Man on a Bike). 19+. $15 + tax online, $20 at the door.",
     ticketUrl: "https://therainbow.ca/event/6607806/766143442/ash-ravens-band-almyr-jules",
     ticketLabel: "Get Tickets",
   },
@@ -84,7 +86,7 @@ const SHOWS: Show[] = [
     venue: "Angelina's Restaurant",
     city: "Ottawa, ON",
     time: "11:00 AM – 2:00 PM",
-    description: "Solo brunch residency — live music every 1st & 3rd Sunday.",
+    description: "Solo brunch set, every first and third Sunday.",
     tag: "Residency",
   },
   {
@@ -93,16 +95,33 @@ const SHOWS: Show[] = [
     venue: "Angelina's Restaurant",
     city: "Ottawa, ON",
     time: "11:00 AM – 2:00 PM",
-    description: "Solo brunch residency — live music every 1st & 3rd Sunday.",
+    description: "Solo brunch set, every first and third Sunday.",
     tag: "Residency",
+  },
+  {
+    date: "November 13, 2026",
+    name: "Indie Week Canada",
+    venue: "Rainbow Bistro",
+    city: "Ottawa, ON",
+    time: "8:00 PM",
+    description: "Indie Week Canada showcase.",
+    tag: "Indie Week",
   },
 ];
 
-const sorted = SHOWS.slice().sort(
-  (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-);
+const DAY = 24 * 60 * 60 * 1000;
+
+// Keep a show listed through the end of its day (with slack for time zones).
+function getUpcomingShows(): Show[] {
+  const cutoff = Date.now() - DAY;
+  return SHOWS.filter((s) => new Date(s.date).getTime() >= cutoff).sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  );
+}
 
 export default function ShowsPage() {
+  const upcoming = getUpcomingShows();
+
   return (
     <div className="mx-auto max-w-6xl px-6 py-20">
       <p className="font-display text-sm uppercase tracking-[0.4em] text-gold">
@@ -112,8 +131,15 @@ export default function ShowsPage() {
         Shows
       </h1>
 
+      {upcoming.length === 0 && (
+        <p className="mt-16 text-cream-soft">
+          No dates on the calendar right now. New shows are announced on
+          Instagram first.
+        </p>
+      )}
+
       <div className="mt-16 divide-y divide-charcoal-line/40">
-        {sorted.map((show) => (
+        {upcoming.map((show) => (
           <div
             key={`${show.date}-${show.venue}`}
             className="grid gap-2 py-7 sm:grid-cols-[10rem_1fr]"
@@ -131,10 +157,12 @@ export default function ShowsPage() {
                 )}
               </div>
               <p className="mt-1 text-sm text-cream-soft">
-                {show.venue} &mdash; {show.city}
+                {show.venue}, {show.city}
               </p>
               <p className="mt-0.5 text-sm text-cream-soft">{show.time}</p>
-              <p className="mt-2 text-sm text-cream-soft/70">{show.description}</p>
+              {show.description && (
+                <p className="mt-2 text-sm text-cream-soft/70">{show.description}</p>
+              )}
               {show.ticketUrl && (
                 <a
                   href={show.ticketUrl}
@@ -155,8 +183,7 @@ export default function ShowsPage() {
           More dates coming soon
         </h2>
         <p className="mx-auto mt-3 max-w-md text-cream-soft">
-          New shows are announced first on Instagram. Follow along so you
-          don&rsquo;t miss the next one.
+          New shows are announced on Instagram first.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
@@ -172,7 +199,7 @@ export default function ShowsPage() {
             href="/contact"
             className="rounded-full border border-cream-soft/40 px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-cream transition-colors hover:border-gold hover:text-gold"
           >
-            Get Email Updates
+            Get In Touch
           </Link>
         </div>
       </div>

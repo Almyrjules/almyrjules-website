@@ -7,12 +7,12 @@ import {
   TiktokIcon,
   YoutubeIcon,
 } from "@/app/components/icons";
-import { SOCIAL_LINKS } from "@/app/lib/site";
+import { BOOKING_EMAIL, SOCIAL_LINKS } from "@/app/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact | Almyr Jules",
   description:
-    "Get in touch with Almyr Jules for booking inquiries, press, or just to say hello.",
+    "Contact Almyr Jules for bookings, press and collaborations.",
 };
 
 const SOCIALS = [
@@ -34,8 +34,11 @@ export default function ContactPage() {
         Contact
       </h1>
       <p className="mt-4 max-w-xl text-cream-soft">
-        Booking inquiries, press requests, collaborations, or just want to say
-        hello? Send a message below.
+        For bookings, press and collaborations, use the form below or email{" "}
+        <a href={`mailto:${BOOKING_EMAIL}`} className="text-gold hover:text-gold-bright">
+          {BOOKING_EMAIL}
+        </a>
+        .
       </p>
 
       <div className="mt-12 grid gap-12 md:grid-cols-2">
@@ -95,10 +98,9 @@ export default function ContactPage() {
         </form>
 
         <div>
-          <h2 className="font-display text-2xl text-cream">Find Almyr Online</h2>
+          <h2 className="font-display text-2xl text-cream">Follow</h2>
           <p className="mt-4 text-cream-soft">
-            Follow for new music, behind-the-scenes content, and show
-            announcements.
+            New music and show dates land here first.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             {SOCIALS.map(({ href, label, Icon }) => (

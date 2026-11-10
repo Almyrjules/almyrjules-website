@@ -12,24 +12,39 @@ import {
 export const metadata: Metadata = {
   title: "Music | Almyr Jules",
   description:
-    "Listen to music from Almyr Jules — singles, EPs, and full releases.",
+    "Listen to singles, EPs and albums from Almyr Jules.",
 };
 
 const RELEASES = [
   {
+    title: "Essentials Vol. 1",
+    type: "Album · 2026",
+    cover: "/images/cover-essentials-vol-1.jpg",
+    url: "https://open.spotify.com/album/4YI929G3Wyx605RziwMCwL",
+  },
+  {
+    title: "Starlight",
+    type: "Single · 2026",
+    cover: "/images/cover-starlight.jpg",
+    url: "https://open.spotify.com/album/6CKlmFKr1xxl2fgRp8SVt3",
+  },
+  {
     title: "If You Come Back For More",
-    type: "Single",
+    type: "Single · 2025",
     cover: "/images/cover-if-you-come-back.jpg",
+    url: "https://open.spotify.com/album/6ChQaXELFlIcwbGVbz0zlx",
   },
   {
     title: "The Beginning",
-    type: "Single",
+    type: "Single · 2021",
     cover: "/images/cover-the-beginning.jpg",
+    url: SOCIAL_LINKS.spotify,
   },
   {
     title: "Levels",
-    type: "EP",
+    type: "EP · 2022",
     cover: "/images/cover-levels.jpg",
+    url: "https://open.spotify.com/album/3PmodbslSqB1tkcO4aDwz4",
   },
 ];
 
@@ -72,7 +87,7 @@ export default function MusicPage() {
         {RELEASES.map((release) => (
           <a
             key={release.title}
-            href={SOCIAL_LINKS.spotify}
+            href={release.url}
             target="_blank"
             rel="noopener noreferrer"
             className="group"

@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "id": "essentials-vol1-vinyl",
+      "name": "Essentials Vol 1",
+      "category": "Music",
+      "variant": "Vinyl",
+      "sku": "MUS-EV1-VINYL",
+      "price": 30,
+      "stock": 0,
+      "lowStockThreshold": 5,
+      "image": null,
+      "notes": "",
+      "recipe": [
+        { "material": "Vinyl Record (pressed)", "quantity": 1, "unit": "pc" },
+        { "material": "Album Sleeve", "quantity": 1, "unit": "pc" },
+        { "material": "Inner Sleeve", "quantity": 1, "unit": "pc" }
+      ]
+    },
+    {
+      "id": "essentials-vol1-cd",
+      "name": "Essentials Vol 1",
+      "category": "Music",
+      "variant": "CD",
+      "sku": "MUS-EV1-CD",
+      "price": 15,
+      "stock": 0,
+      "lowStockThreshold": 10,
+      "image": null,
+      "notes": "",
+      "recipe": [
+        { "material": "CD (burned/pressed)", "quantity": 1, "unit": "pc" },
+        { "material": "Jewel Case", "quantity": 1, "unit": "pc" },
+        { "material": "CD Booklet Insert", "quantity": 1, "unit": "pc" }
+      ]
+    },
+    {
+      "id": "tshirt-black-s",
+      "name": "Almyr Jules T-Shirt",
+      "category": "Apparel",
+      "variant": "Black / S",
+      "sku": "APP-TS-BLK-S",
+      "price": 35,
+      "stock": 0,
+      "lowStockThreshold": 3,
+      "image": null,
+      "notes": "",
+      "recipe": [
+        { "material": "Blank T-Shirt (S)", "quantity": 1, "unit": "pc" },
+        { "material": "Screen Print Transfer", "quantity": 1, "unit": "pc" },
+        { "material": "Hang Tag", "quantity": 1, "unit": "pc" }
+      ]
+    },
+    {
+      "id": "tshirt-black-m",
+      "name": "Almyr Jules T-Shirt",
+      "category": "Apparel",
+      "variant": "Black / M",
+      "sku": "APP-TS-BLK-M",
+      "price": 35,
+      "stock": 0,
+      "lowStockThreshold": 3,
+      "image": null,
+      "notes": "",
+      "recipe": [
+        { "material": "Blank T-Shirt (M)", "quantity": 1, "unit": "pc" },
+        { "material": "Screen Print Transfer", "quantity": 1, "unit": "pc" },
+        { "material": "Hang Tag", "quantity": 1, "unit": "pc" }
+      ]
+    },
+    {
+      "id": "tshirt-black-l",
+      "name": "Almyr Jules T-Shirt",
+      "category": "Apparel",
+      "variant": "Black / L",
+      "sku": "APP-TS-BLK-L",
+      "price": 35,
+      "stock": 0,
+      "lowStockThreshold": 3,
+      "image": null,
+      "notes": "",
+      "recipe": [
+        { "material": "Blank T-Shirt (L)", "quantity": 1, "unit": "pc" },
+        { "material": "Screen Print Transfer", "quantity": 1, "unit": "pc" },
+        { "material": "Hang Tag", "quantity": 1, "unit": "pc" }
+      ]
+    },
+    {
+      "id": "tshirt-black-xl",
+      "name": "Almyr Jules T-Shirt",
+      "category": "Apparel",
+      "variant": "Black / XL",
+      "sku": "APP-TS-BLK-XL",
+      "price": 35,
+      "stock": 0,
+      "lowStockThreshold": 3,
+      "image": null,
+      "notes": "",
+      "recipe": [
+        { "material": "Blank T-Shirt (XL)", "quantity": 1, "unit": "pc" },
+        { "material": "Screen Print Transfer", "quantity": 1, "unit": "pc" },
+        { "material": "Hang Tag", "quantity": 1, "unit": "pc" }
+      ]
+    },
+    {
+      "id": "hoodie-black-m",
+      "name": "Almyr Jules Hoodie",
+      "category": "Apparel",
+      "variant": "Black / M",
+      "sku": "APP-HD-BLK-M",
+      "price": 65,
+      "stock": 0,
+      "lowStockThreshold": 2,
+      "image": null,
+      "notes": "",
+      "recipe": [
+        { "material": "Blank Hoodie (M)", "quantity": 1, "unit": "pc" },
+        { "material": "Screen Print / Embroidery", "quantity": 1, "unit": "pc" },
+        { "material": "Hang Tag", "quantity": 1, "unit": "pc" }
+      ]
+    },
+    {
+      "id": "hoodie-black-l",
+      "name": "Almyr Jules Hoodie",
+      "category": "Apparel",
+      "variant": "Black / L",
+      "sku": "APP-HD-BLK-L",
+      "price": 65,
+      "stock": 0,
+      "lowStockThreshold": 2,
+      "image": null,
+      "notes": "",
+      "recipe": [
+        { "material": "Blank Hoodie (L)", "quantity": 1, "unit": "pc" },
+        { "material": "Screen Print / Embroidery", "quantity": 1, "unit": "pc" },
+        { "material": "Hang Tag", "quantity": 1, "unit": "pc" }
+      ]
+    },
+    {
+      "id": "cap-black",
+      "name": "Almyr Jules Cap",
+      "category": "Accessories",
+      "variant": "Black",
+      "sku": "ACC-CAP-BLK",
+      "price": 30,
+      "stock": 0,
+      "lowStockThreshold": 3,
+      "image": null,
+      "notes": "",
+      "recipe": [
+        { "material": "Blank Cap", "quantity": 1, "unit": "pc" },
+        { "material": "Embroidery / Patch", "quantity": 1, "unit": "pc" }
+      ]
+    }
+  ]
+}

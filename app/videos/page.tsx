@@ -4,7 +4,7 @@ import { SOCIAL_LINKS, VIDEOS } from "@/app/lib/site";
 
 export const metadata: Metadata = {
   title: "Videos | Almyr Jules",
-  description: "Official music videos from Almyr Jules.",
+  description: "Music videos and lyric videos from Almyr Jules.",
 };
 
 export default function VideosPage() {
@@ -17,7 +17,7 @@ export default function VideosPage() {
         Videos
       </h1>
       <p className="mt-4 max-w-xl text-cream-soft">
-        Official music videos. Subscribe on{" "}
+        Music videos and lyric videos. Subscribe on{" "}
         <a
           href={SOCIAL_LINKS.youtube}
           target="_blank"
@@ -26,7 +26,7 @@ export default function VideosPage() {
         >
           YouTube
         </a>{" "}
-        for the latest releases.
+        for new releases.
       </p>
 
       <div className="mt-12 grid gap-10 sm:grid-cols-2">

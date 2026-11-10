@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Bio | Almyr Jules",
   description:
-    "Almyr Jules is a rising Canadian voice in ballad R&B and soul, blending classic influences with contemporary storytelling.",
+    "Almyr Jules is a contemporary R&B and soul singer-songwriter from Ottawa.",
 };
 
 export default function BioPage() {
@@ -14,7 +14,7 @@ export default function BioPage() {
         Bio
       </p>
       <h1 className="mt-3 font-display text-4xl text-cream sm:text-5xl">
-        Redefining modern ballad R&amp;B and soul
+        Contemporary R&amp;B and soul from Ottawa
       </h1>
 
       <div className="mt-12 grid gap-12 md:grid-cols-2 md:items-start">
@@ -30,25 +30,24 @@ export default function BioPage() {
 
         <div className="space-y-6 text-cream-soft">
           <p>
-            Almyr Jules is a rising Canadian voice in the ballad R&amp;B and
-            soul world, delivering music with raw emotional depth and
-            vulnerability. His sound bridges classic soul tradition with a
-            contemporary R&amp;B sensibility, drawing inspiration from artists
-            like Donny Hathaway, Maxwell, and Giveon &mdash; while carving out a
-            distinct lane all his own.
+            Almyr Jules is a singer, songwriter and guitarist based in Ottawa.
+            He makes contemporary R&amp;B and soul in the tradition of Donny
+            Hathaway and Maxwell, with an ear for newer voices like Giveon.
           </p>
           <p>
-            A true craftsman of song, Almyr writes narratives centered on
-            love, longing, and redemption. His performances are emotionally
-            striking, delivered over seductive musical progressions with
-            smouldering vocal work that draws listeners into the story behind
-            every track.
+            His songs are about love, longing and redemption, and he sings them
+            like he means it. On stage he moves between a stripped-back solo set
+            and a full band, SWAY, and the songs hold up either way.
           </p>
           <p>
-            His latest project, <em>Levels</em>, is a six-track EP featuring
-            collaborations with JW-Jones and Jahmeema, alongside the
-            standalone singles &ldquo;The Beginning&rdquo; and &ldquo;If You
-            Come Back For More.&rdquo;
+            He also worked as a musician on the OWN film{" "}
+            <em>Song and Story: Amazing Grace</em>.
+          </p>
+          <p>
+            His album <em>Essentials Vol. 1</em> is out now. It collects 13
+            songs from 2020 to 2026, including tracks from the <em>Levels</em> EP
+            with JW-Jones and Jahmeema and the singles &ldquo;Starlight&rdquo;
+            and &ldquo;If You Come Back For More.&rdquo;
           </p>
 
           <blockquote className="border-l-2 border-gold pl-6 font-display text-lg italic text-cream">
@@ -56,7 +55,7 @@ export default function BioPage() {
             contemporary flair. With his velvety vocals and emotive lyrics, he
             effortlessly transports listeners.&rdquo;
             <footer className="mt-2 text-sm not-italic uppercase tracking-[0.2em] text-cream-soft">
-              &mdash; Certified Bop
+              Certified Bop
             </footer>
           </blockquote>
         </div>
@@ -112,7 +111,7 @@ export default function BioPage() {
           On Stage
         </p>
         <h2 className="mt-3 text-3xl font-light tracking-[0.05em] text-cream">
-          Almyr Jules &amp; The Band
+          Almyr Jules &amp; SWAY
         </h2>
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           <div className="overflow-hidden rounded-2xl">
@@ -136,7 +135,7 @@ export default function BioPage() {
           <div className="overflow-hidden rounded-2xl">
             <Image
               src="/images/band-group.jpg"
-              alt="Almyr Jules and the full band"
+              alt="Almyr Jules and SWAY"
               width={1800}
               height={1200}
               className="h-full w-full object-cover"

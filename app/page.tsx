@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LISTEN_NOW_URL, SPOTIFY_FEATURED_TRACK_EMBED } from "@/app/lib/site";
+import {
+  FEATURED_APPLE_MUSIC_URL,
+  LISTEN_NOW_URL,
+  SPOTIFY_FEATURED_EMBED,
+} from "@/app/lib/site";
 
 export default function Home() {
   return (
@@ -20,13 +24,13 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,var(--color-charcoal)_100%)] opacity-60" />
         <div className="relative mx-auto w-full max-w-6xl px-6 pb-16 pt-32 sm:pb-24">
           <p className="font-display text-sm uppercase tracking-[0.4em] text-gold">
-            Soul &middot; Folk &middot; Story
+            Contemporary R&amp;B &middot; Soul
           </p>
           <h1 className="text-shine mt-4 text-5xl font-light tracking-[0.05em] sm:text-6xl">
             Almyr Jules
           </h1>
           <p className="mt-6 max-w-xl text-lg text-cream-soft">
-            New single &ldquo;If You Come Back For More&rdquo; out now.
+            The album <em>Essentials Vol. 1</em> is out now.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
@@ -52,28 +56,30 @@ export default function Home() {
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
               <p className="font-display text-sm uppercase tracking-[0.4em] text-gold">
-                New Release
+                Out Now
               </p>
               <h2 className="mt-3 font-display text-3xl text-cream sm:text-4xl">
-                If You Come Back For More
+                Essentials Vol. 1
               </h2>
               <p className="mt-4 max-w-md text-cream-soft">
-                The latest single from Almyr Jules is streaming everywhere now.
-                Press play below or find it on your favourite platform.
+                Thirteen songs from 2020 to 2026, including &ldquo;Starlight,&rdquo;
+                &ldquo;If You Come Back For More&rdquo; and tracks from the{" "}
+                <em>Levels</em> EP. Streaming now on Spotify, Apple Music and
+                everywhere else.
               </p>
               <a
-                href={LISTEN_NOW_URL}
+                href={FEATURED_APPLE_MUSIC_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-gold hover:text-gold-bright"
               >
-                All streaming links &rarr;
+                Listen on Apple Music &rarr;
               </a>
             </div>
             <div className="overflow-hidden rounded-2xl border border-charcoal-line/60 shadow-2xl">
               <iframe
-                title="Spotify player — If You Come Back For More"
-                src={SPOTIFY_FEATURED_TRACK_EMBED}
+                title="Spotify player: Essentials Vol. 1"
+                src={SPOTIFY_FEATURED_EMBED}
                 width="100%"
                 height="352"
                 style={{ border: 0 }}
@@ -102,20 +108,18 @@ export default function Home() {
               About
             </p>
             <h2 className="mt-3 font-display text-3xl text-cream sm:text-4xl">
-              A voice rooted in soul, shaped by story.
+              Songs about love, longing and second chances.
             </h2>
             <p className="mt-4 text-cream-soft">
-              Almyr Jules blends warm soul melodies with folk-driven
-              storytelling, crafting songs that feel both timeless and deeply
-              personal. Whether on stage with a full band or stripped down with
-              just a guitar, every performance is an invitation into the story
-              behind the song.
+              Almyr Jules is a singer-songwriter from Ottawa making
+              contemporary R&amp;B and soul. He plays his songs two ways: alone
+              with a guitar, or with his five-piece band, SWAY.
             </p>
             <Link
               href="/bio"
               className="mt-6 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-gold hover:text-gold-bright"
             >
-              Read the full story &rarr;
+              Read the bio &rarr;
             </Link>
           </div>
         </div>
@@ -129,7 +133,7 @@ export default function Home() {
                 On Stage
               </p>
               <h2 className="mt-3 font-display text-3xl text-cream sm:text-4xl">
-                Live &amp; in the moment
+                Live
               </h2>
             </div>
             <Link
@@ -205,7 +209,7 @@ export default function Home() {
             Stay In The Loop
           </p>
           <h2 className="mt-3 font-display text-3xl text-cream sm:text-4xl">
-            Follow along for new music &amp; show announcements
+            New music and show dates go up on Instagram first.
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
