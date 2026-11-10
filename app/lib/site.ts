@@ -60,9 +60,9 @@ export const VIDEOS = [
 export const MUSIC_VIDEOS = [
   { id: "1ma9xgX7N70", title: "What Am I Supposed To Do (Official Music Video)" },
   { id: "rwi6kW0ZnaU", title: "The Beginning (Official Music Video)" },
-  { id: "OiQilZuWVTQ", title: "What Am I Supposed To Do (Visualizer)" },
+  { id: "OiQilZuWVTQ", hq: true, title: "What Am I Supposed To Do (Visualizer)" },
   { id: "A9anHb_BC3g", title: "Don't Go (Official Lyric Video)" },
-  { id: "v5rH-JFdv9M", title: "Outside (Official Lyric Video)" },
+  { id: "v5rH-JFdv9M", hq: true, title: "Outside (Official Lyric Video)" },
 ];
 
 export const LIVE_VIDEOS = [
@@ -77,6 +77,6 @@ export const LIVE_VIDEOS = [
   { id: "vT5fcvoQImM", title: "Don't Go (Live at Irene's Pub)" },
   { id: "QlnOIEbCeAQ", title: "Living Memories (Live at Irene's Pub)" },
   { id: "tciJRNBG08Y", title: "Clothes Off (Cover, Live at Irene's Pub)" },
-  { id: "g7wLGY_Ma6M", title: "Outside (Live at Rainbow Bistro)" },
-  { id: "fUoqbuUu3DU", title: "Because Of You (Live at Rainbow Bistro)" },
+  { id: "g7wLGY_Ma6M", hq: true, title: "Outside (Live at Rainbow Bistro)" },
+  { id: "fUoqbuUu3DU", hq: true, title: "Because Of You (Live at Rainbow Bistro)" },
 ];

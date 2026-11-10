@@ -35,7 +35,7 @@ export default function VideosPage() {
       </h2>
       <div className="mt-8 grid gap-10 sm:grid-cols-2">
         {MUSIC_VIDEOS.map((video) => (
-          <VideoEmbed key={video.id} id={video.id} title={video.title} />
+          <VideoEmbed key={video.id} {...video} />
         ))}
       </div>
 
@@ -44,7 +44,7 @@ export default function VideosPage() {
       </h2>
       <div className="mt-8 grid gap-10 sm:grid-cols-2">
         {LIVE_VIDEOS.map((video) => (
-          <VideoEmbed key={video.id} id={video.id} title={video.title} />
+          <VideoEmbed key={video.id} {...video} />
         ))}
       </div>
     </div>

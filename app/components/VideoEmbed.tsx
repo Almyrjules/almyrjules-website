@@ -5,9 +5,12 @@ import { useState } from "react";
 export default function VideoEmbed({
   id,
   title,
+  hq = false,
 }: {
   id: string;
   title: string;
+  // Older uploads have no maxres thumbnail; YouTube serves a grey placeholder.
+  hq?: boolean;
 }) {
   const [playing, setPlaying] = useState(false);
 
@@ -31,13 +34,7 @@ export default function VideoEmbed({
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
-              onError={(e) => {
-                const img = e.currentTarget;
-                if (!img.src.includes("hqdefault")) {
-                  img.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
-                }
-              }}
+              src={`https://img.youtube.com/vi/${id}/${hq ? "hqdefault" : "maxresdefault"}.jpg`}
               loading="lazy"
               alt={title}
               className="absolute inset-0 h-full w-full object-cover"
