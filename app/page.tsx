@@ -2,9 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   FEATURED_APPLE_MUSIC_URL,
-  LISTEN_NOW_URL,
+  FEATURED_SPOTIFY_URL,
   SPOTIFY_FEATURED_EMBED,
 } from "@/app/lib/site";
+
+const ESSENTIALS_TRACKS = [
+  "The Beginning",
+  "Don't Go",
+  "Take A Little Time",
+  "Because of You (feat. Jahmeema)",
+  "Never Be Alone (feat. JW-Jones)",
+  "Living Memories",
+  "Outside",
+  "Levels (feat. JW-Jones)",
+  "For Today",
+  "What Am I Supposed To Do",
+  "Let's Run",
+  "Starlight",
+  "If You Come Back For More",
+];
 
 export default function Home() {
   return (
@@ -29,65 +45,126 @@ export default function Home() {
           <h1 className="text-shine mt-4 text-5xl font-light tracking-[0.05em] sm:text-6xl">
             Almyr Jules
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-cream-soft">
-            The album <em>Essentials Vol. 1</em> is out now.
-          </p>
+          <div className="mt-8 flex max-w-xl items-center gap-5">
+            <a
+              href={FEATURED_SPOTIFY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glow-gold relative h-24 w-24 shrink-0 overflow-hidden rounded-lg sm:h-28 sm:w-28"
+            >
+              <Image
+                src="/images/cover-essentials-vol-1.jpg"
+                alt="Essentials Vol. 1 cover art"
+                fill
+                sizes="112px"
+                className="object-cover"
+                priority
+              />
+            </a>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+                New Album &middot; Out Now
+              </p>
+              <p className="mt-1 font-display text-2xl text-cream sm:text-3xl">
+                Essentials Vol. 1
+              </p>
+              <p className="mt-1 text-sm text-cream-soft">
+                13 songs, 2020 to 2026
+              </p>
+            </div>
+          </div>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href={LISTEN_NOW_URL}
+              href={FEATURED_SPOTIFY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold rounded-full px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-charcoal"
             >
-              Listen Now
+              Stream the Album
             </a>
-            <Link
-              href="/videos"
+            <a
+              href={FEATURED_APPLE_MUSIC_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-cream-soft/40 px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-cream transition-colors hover:border-gold hover:text-gold"
             >
-              Watch Videos
-            </Link>
+              Apple Music
+            </a>
           </div>
         </div>
       </section>
 
       <section className="border-t border-charcoal-line/60 bg-charcoal-soft">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="grid gap-10 md:grid-cols-2 md:items-center">
+          <div className="grid gap-12 md:grid-cols-2 md:items-start">
+            <a
+              href={FEATURED_SPOTIFY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glow-gold block overflow-hidden rounded-2xl"
+            >
+              <Image
+                src="/images/cover-essentials-vol-1.jpg"
+                alt="Essentials Vol. 1 cover art"
+                width={1000}
+                height={1000}
+                className="h-full w-full object-cover"
+              />
+            </a>
             <div>
               <p className="font-display text-sm uppercase tracking-[0.4em] text-gold">
-                Out Now
+                The New Album
               </p>
-              <h2 className="mt-3 font-display text-3xl text-cream sm:text-4xl">
+              <h2 className="mt-3 font-display text-4xl text-cream sm:text-5xl">
                 Essentials Vol. 1
               </h2>
               <p className="mt-4 max-w-md text-cream-soft">
-                Thirteen songs from 2020 to 2026, including &ldquo;Starlight,&rdquo;
-                &ldquo;If You Come Back For More&rdquo; and tracks from the{" "}
-                <em>Levels</em> EP. Streaming now on Spotify, Apple Music and
-                everywhere else.
+                Thirteen songs from 2020 to 2026, together for the first time.
+                It has &ldquo;Starlight,&rdquo; &ldquo;If You Come Back For
+                More&rdquo; and the <em>Levels</em> collaborations with
+                JW-Jones and Jahmeema.
               </p>
-              <a
-                href={FEATURED_APPLE_MUSIC_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-gold hover:text-gold-bright"
-              >
-                Listen on Apple Music &rarr;
-              </a>
+              <ol className="mt-6 grid gap-x-6 gap-y-1.5 text-sm text-cream-soft sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-7">
+                {ESSENTIALS_TRACKS.map((track, i) => (
+                  <li key={track} className="flex gap-3">
+                    <span className="w-5 shrink-0 text-right text-gold/70">
+                      {i + 1}
+                    </span>
+                    <span>{track}</span>
+                  </li>
+                ))}
+              </ol>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href={FEATURED_SPOTIFY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-gold rounded-full px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-charcoal"
+                >
+                  Spotify
+                </a>
+                <a
+                  href={FEATURED_APPLE_MUSIC_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-cream-soft/40 px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-cream transition-colors hover:border-gold hover:text-gold"
+                >
+                  Apple Music
+                </a>
+              </div>
             </div>
-            <div className="overflow-hidden rounded-2xl border border-charcoal-line/60 shadow-2xl">
-              <iframe
-                title="Spotify player: Essentials Vol. 1"
-                src={SPOTIFY_FEATURED_EMBED}
-                width="100%"
-                height="352"
-                style={{ border: 0 }}
-                allowFullScreen
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              />
-            </div>
+          </div>
+          <div className="mt-12 overflow-hidden rounded-2xl border border-charcoal-line/60 shadow-2xl">
+            <iframe
+              title="Spotify player: Essentials Vol. 1"
+              src={SPOTIFY_FEATURED_EMBED}
+              width="100%"
+              height="352"
+              style={{ border: 0 }}
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
