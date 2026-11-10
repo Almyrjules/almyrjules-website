@@ -189,8 +189,9 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-cream-soft">
               Almyr Jules is a singer-songwriter from Ottawa making
-              contemporary R&amp;B and soul. He plays his songs two ways: alone
-              with a guitar, or with his five-piece band, SWAY.
+              contemporary R&amp;B and soul, in the spirit of Allen Stone, Leon
+              Bridges and Bruno Mars. Catch him solo with a guitar or with a
+              full band.
             </p>
             <Link
               href="/bio"

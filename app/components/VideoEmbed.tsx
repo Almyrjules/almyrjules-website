@@ -32,6 +32,13 @@ export default function VideoEmbed({
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+              onError={(e) => {
+                const img = e.currentTarget;
+                if (!img.src.includes("hqdefault")) {
+                  img.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+                }
+              }}
+              loading="lazy"
               alt={title}
               className="absolute inset-0 h-full w-full object-cover"
             />

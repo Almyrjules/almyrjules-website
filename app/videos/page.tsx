@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import VideoEmbed from "@/app/components/VideoEmbed";
-import { SOCIAL_LINKS, VIDEOS } from "@/app/lib/site";
+import { LIVE_VIDEOS, MUSIC_VIDEOS, SOCIAL_LINKS } from "@/app/lib/site";
 
 export const metadata: Metadata = {
   title: "Videos | Almyr Jules",
-  description: "Music videos and lyric videos from Almyr Jules.",
+  description:
+    "Music videos and full live performances from Almyr Jules.",
 };
 
 export default function VideosPage() {
@@ -17,7 +18,7 @@ export default function VideosPage() {
         Videos
       </h1>
       <p className="mt-4 max-w-xl text-cream-soft">
-        Music videos and lyric videos. Subscribe on{" "}
+        Music videos and full live performances. Subscribe on{" "}
         <a
           href={SOCIAL_LINKS.youtube}
           target="_blank"
@@ -26,11 +27,23 @@ export default function VideosPage() {
         >
           YouTube
         </a>{" "}
-        for new releases.
+        for new uploads.
       </p>
 
-      <div className="mt-12 grid gap-10 sm:grid-cols-2">
-        {VIDEOS.map((video) => (
+      <h2 className="mt-16 font-display text-2xl text-cream sm:text-3xl">
+        Music Videos
+      </h2>
+      <div className="mt-8 grid gap-10 sm:grid-cols-2">
+        {MUSIC_VIDEOS.map((video) => (
+          <VideoEmbed key={video.id} id={video.id} title={video.title} />
+        ))}
+      </div>
+
+      <h2 className="mt-20 font-display text-2xl text-cream sm:text-3xl">
+        Live Performances
+      </h2>
+      <div className="mt-8 grid gap-10 sm:grid-cols-2">
+        {LIVE_VIDEOS.map((video) => (
           <VideoEmbed key={video.id} id={video.id} title={video.title} />
         ))}
       </div>

@@ -56,3 +56,27 @@ export const VIDEOS = [
     title: "Don't Go (Official Lyric Video)",
   },
 ];
+
+export const MUSIC_VIDEOS = [
+  { id: "1ma9xgX7N70", title: "What Am I Supposed To Do (Official Music Video)" },
+  { id: "rwi6kW0ZnaU", title: "The Beginning (Official Music Video)" },
+  { id: "OiQilZuWVTQ", title: "What Am I Supposed To Do (Visualizer)" },
+  { id: "A9anHb_BC3g", title: "Don't Go (Official Lyric Video)" },
+  { id: "v5rH-JFdv9M", title: "Outside (Official Lyric Video)" },
+];
+
+export const LIVE_VIDEOS = [
+  { id: "2ybRAMF1sJ8", title: "Take A Little Time (Live on Rogers TV Encore Ottawa)" },
+  { id: "_KogiqePgjA", title: "Billie Jean (Michael Jackson Cover, Live)" },
+  { id: "zpjI7A4CaGg", title: "Because Of You (Live at CityFolk Festival)" },
+  { id: "EP-jv7I0B10", title: "If You Come Back For More (Live at Irene's Pub)" },
+  { id: "kmJvZhuQN2Q", title: "Outside / Play That Funky Music (Live at Irene's Pub)" },
+  { id: "zxa0BzwvXjQ", title: "Ain't No Sunshine (Live at Irene's Pub)" },
+  { id: "JGpIadYI0sA", title: "Because Of You (Live at Irene's Pub)" },
+  { id: "I1alyfrLJoE", title: "Levels (Live at Irene's Pub)" },
+  { id: "vT5fcvoQImM", title: "Don't Go (Live at Irene's Pub)" },
+  { id: "QlnOIEbCeAQ", title: "Living Memories (Live at Irene's Pub)" },
+  { id: "tciJRNBG08Y", title: "Clothes Off (Cover, Live at Irene's Pub)" },
+  { id: "g7wLGY_Ma6M", title: "Outside (Live at Rainbow Bistro)" },
+  { id: "fUoqbuUu3DU", title: "Because Of You (Live at Rainbow Bistro)" },
+];

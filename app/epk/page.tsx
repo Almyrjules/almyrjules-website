@@ -21,13 +21,13 @@ const FACTS = [
   { label: "Based In", value: "Ottawa, Ontario, Canada" },
   { label: "Latest Single", value: "“Starlight” (March 2026)" },
   { label: "Album", value: "Essentials Vol. 1 (13 tracks), out now" },
-  { label: "Live", value: "Solo, acoustic duo, or with his five-piece band SWAY" },
+  { label: "Live", value: "Solo, acoustic duo, or with a five-piece band" },
 ];
 
 const PRESS_PHOTOS = [
   { src: "/images/portrait-studio.jpg", alt: "Almyr Jules studio portrait", width: 1200, height: 1800 },
   { src: "/images/live-club-1.jpg", alt: "Almyr Jules performing live at Overflow Brewing Company", width: 1800, height: 1200 },
-  { src: "/images/band-group.jpg", alt: "Almyr Jules and the band SWAY", width: 1800, height: 1200 },
+  { src: "/images/band-group.jpg", alt: "Almyr Jules and his band", width: 1800, height: 1200 },
   { src: "/images/portrait-chair.jpg", alt: "Almyr Jules portrait with guitar", width: 1200, height: 1800 },
   { src: "/images/live-festival-1.jpg", alt: "Almyr Jules and band performing at City Folk Fest", width: 1800, height: 1199 },
   { src: "/images/portrait-noir.jpg", alt: "Almyr Jules portrait in black", width: 800, height: 1200 },
@@ -86,24 +86,27 @@ export default function EPKPage() {
           </h2>
           <div className="mt-6 space-y-5 text-cream-soft">
             <p>
-              Almyr Jules is a singer, songwriter and guitarist based in Ottawa.
-              He makes contemporary R&amp;B and soul in the tradition of Donny
-              Hathaway and Maxwell, with an ear for newer voices like Giveon.
+              Almyr Jules is a singer, songwriter and guitarist from Ottawa making
+              contemporary R&amp;B and soul. Think Allen Stone&rsquo;s grit, Leon
+              Bridges&rsquo; vintage warmth and Bruno Mars&rsquo; feel for a groove.
             </p>
             <p>
-              His songs are about love, longing and redemption, and he sings them
-              like he means it. On stage he moves between a stripped-back solo set
-              and a full band, SWAY, and the songs hold up either way.
+              His sound is soul at the core, with modern R&amp;B rhythms, a little
+              funk, and a voice that does the heavy lifting. He writes about love,
+              longing and second chances, and he sings them like he means it.
+            </p>
+            <p>
+              Live, he reads the room. A solo set with just his guitar feels like a
+              conversation; a full band night ends on the dance floor.
+            </p>
+            <p>
+              Start with <em>Essentials Vol. 1</em>: 13 songs from 2020 to 2026,
+              including &ldquo;Starlight,&rdquo; &ldquo;If You Come Back For
+              More&rdquo; and his collaborations with JW-Jones and Jahmeema.
             </p>
             <p>
               He also worked as a musician on the OWN film{" "}
               <em>Song and Story: Amazing Grace</em>.
-            </p>
-            <p>
-              His album <em>Essentials Vol. 1</em> is out now. It collects 13
-              songs from 2020 to 2026, including tracks from the <em>Levels</em> EP
-              with JW-Jones and Jahmeema and the singles &ldquo;Starlight&rdquo;
-              and &ldquo;If You Come Back For More.&rdquo;
             </p>
           </div>
 
@@ -238,13 +241,13 @@ export default function EPKPage() {
           Almyr plays regularly across Ottawa, including a brunch residency
           at Angelina&rsquo;s Restaurant on the first and third Sunday of
           each month. He books as a solo act, an acoustic duo, or with his
-          five-piece band SWAY.
+          five-piece band.
         </p>
 
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           <div className="rounded-2xl border border-charcoal-line/60 bg-charcoal-soft p-8">
             <h3 className="font-display text-xl text-cream">
-              Full Band: SWAY
+              Full Band
             </h3>
             <p className="mt-2 text-sm uppercase tracking-[0.2em] text-gold">
               5-piece

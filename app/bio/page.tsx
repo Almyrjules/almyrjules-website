@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Bio | Almyr Jules",
   description:
-    "Almyr Jules is a contemporary R&B and soul singer-songwriter from Ottawa.",
+    "Almyr Jules is a contemporary R&B and soul singer-songwriter from Ottawa, in the spirit of Allen Stone, Leon Bridges and Bruno Mars.",
 };
 
 export default function BioPage() {
@@ -30,24 +30,23 @@ export default function BioPage() {
 
         <div className="space-y-6 text-cream-soft">
           <p>
-            Almyr Jules is a singer, songwriter and guitarist based in Ottawa.
-            He makes contemporary R&amp;B and soul in the tradition of Donny
-            Hathaway and Maxwell, with an ear for newer voices like Giveon.
+            Almyr Jules is a singer, songwriter and guitarist from Ottawa making
+            contemporary R&amp;B and soul. Think Allen Stone&rsquo;s grit, Leon
+            Bridges&rsquo; vintage warmth and Bruno Mars&rsquo; feel for a groove.
           </p>
           <p>
-            His songs are about love, longing and redemption, and he sings them
-            like he means it. On stage he moves between a stripped-back solo set
-            and a full band, SWAY, and the songs hold up either way.
+            His sound is soul at the core, with modern R&amp;B rhythms, a little
+            funk, and a voice that does the heavy lifting. He writes about love,
+            longing and second chances, and he sings them like he means it.
           </p>
           <p>
-            He also worked as a musician on the OWN film{" "}
-            <em>Song and Story: Amazing Grace</em>.
+            Live, he reads the room. A solo set with just his guitar feels like a
+            conversation; a full band night ends on the dance floor.
           </p>
           <p>
-            His album <em>Essentials Vol. 1</em> is out now. It collects 13
-            songs from 2020 to 2026, including tracks from the <em>Levels</em> EP
-            with JW-Jones and Jahmeema and the singles &ldquo;Starlight&rdquo;
-            and &ldquo;If You Come Back For More.&rdquo;
+            Start with <em>Essentials Vol. 1</em>: 13 songs from 2020 to 2026,
+            including &ldquo;Starlight,&rdquo; &ldquo;If You Come Back For
+            More&rdquo; and his collaborations with JW-Jones and Jahmeema.
           </p>
 
           <blockquote className="border-l-2 border-gold pl-6 font-display text-lg italic text-cream">
@@ -111,7 +110,7 @@ export default function BioPage() {
           On Stage
         </p>
         <h2 className="mt-3 text-3xl font-light tracking-[0.05em] text-cream">
-          Almyr Jules &amp; SWAY
+          With the Band
         </h2>
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           <div className="overflow-hidden rounded-2xl">
@@ -135,7 +134,7 @@ export default function BioPage() {
           <div className="overflow-hidden rounded-2xl">
             <Image
               src="/images/band-group.jpg"
-              alt="Almyr Jules and SWAY"
+              alt="Almyr Jules and his band"
               width={1800}
               height={1200}
               className="h-full w-full object-cover"
