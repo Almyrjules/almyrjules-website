@@ -118,7 +118,7 @@ export default function MusicPage() {
             title="Spotify artist player"
             src={SPOTIFY_ARTIST_EMBED}
             width="100%"
-            height="352"
+            height="720"
             style={{ border: 0 }}
             allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
